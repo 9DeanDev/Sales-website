@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    margin: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #000000;
+
+    &:hover {
+        background: #e0e0e0;
+        transition: 500ms;
+    }
+
+    .img {
+        // img {
+        width: 100%;
+        height: auto;
+        flex: 30%;
+        // }
+    }
+
+    .text {
+        flex: 70%;
+        font-size: 15px;
+    }
+}
