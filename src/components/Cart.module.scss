@@ -1,0 +1,28 @@
+.container {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-left: 2px solid grey;
+
+    &:hover {
+        background: #dddddd;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+    }
+
+    span {
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: red;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}

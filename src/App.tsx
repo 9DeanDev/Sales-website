@@ -1,6 +1,7 @@
 import './App.css';
 import BodyContent from './components/BodyContent';
 import Header from './components/Header';
+import ModalProduct from './components/Modal/ModalProduct';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App container-fluid">
       <Header />
       <BodyContent />
+      <ModalProduct />
     </div>
   );
 }

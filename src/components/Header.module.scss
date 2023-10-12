@@ -1,11 +1,17 @@
 .container {
     display: flex;
     background: #ffffff;
-    padding: 10px;
+    padding-top: 10px;
 
-    .left {}
+    .left {
+        padding-left: 40px;
+    }
 
     .center {}
 
-    .right {}
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
 }

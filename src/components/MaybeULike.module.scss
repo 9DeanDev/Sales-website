@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: #f5e9e9;
+    border-radius: 8px;
+    gap: 12px;
+    padding-block: 16px;
+
+    .title {
+        padding-inline: 16px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .types {
+        display: flex;
+        padding-inline: 16px;
+
+
+        .typeChild {
+            border: 1px solid rgb(214, 214, 214);
+            border-radius: 20px;
+            background: #ffffff;
+            margin-right: 10px;
+            padding: 0 15px;
+            cursor: pointer;
+
+            &:hover {
+                background: #d8d8d8;
+            }
+        }
+    }
+
+    .products {
+        display: grid;
+        padding-inline: 16px;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 8px;
+    }
+}

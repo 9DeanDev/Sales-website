@@ -6,9 +6,11 @@ type Props = {
 
 const VNavChild = ({ img, text }: Props) => {
     return (
-        <a className={`${Styles.container} ro`} href=''>
-            <img className={`${Styles.img} col`} src={img} />
-            <div className={`${Styles.text} col9`}>
+        <a className={`${Styles.container}`} href=''>
+            <div className={`${Styles.img}`}>
+                <img src={img} />
+            </div>
+            <div className={`${Styles.text}`}>
                 {text}
             </div>
         </a>

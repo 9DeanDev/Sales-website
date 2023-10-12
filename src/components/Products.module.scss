@@ -1,0 +1,68 @@
+.container {
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .link {
+        text-decoration: none;
+        color: rgb(39, 39, 42);
+
+
+        .img {}
+
+        .content {
+            padding: 0 8px;
+            gap: 4px;
+
+            .label {
+                img {
+                    width: 60%;
+                    height: auto;
+                }
+            }
+
+            .title {
+                font-size: 12px;
+                font-weight: 400;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+
+            .ratings {
+                display: flex;
+
+                span {
+                    padding: 0;
+
+                    .right {
+                        transform: scaleX(-1);
+                        margin-left: -16px;
+                    }
+
+                    .left {}
+                }
+            }
+
+            .price {
+                text-align: left;
+                font-size: 16px;
+                line-height: 150%;
+                font-weight: 500;
+                color: rgb(39, 39, 42);
+            }
+        }
+
+        .dateShipping {
+            margin-left: 8px;
+            border-top: 1px solid rgb(226, 226, 226);
+            color: rgb(148, 148, 148);
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+
+}
