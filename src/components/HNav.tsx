@@ -3,6 +3,7 @@ import { HNavChild1, HNavChild2 } from './HNavChild'
 import { GoHomeFill } from 'react-icons/go';
 import { AiOutlineCrown } from 'react-icons/ai';
 import { PiSmileyWink } from 'react-icons/pi';
+import ModalAccount from './Modal/ModalAccount';
 
 type Props = {
 
@@ -13,7 +14,7 @@ const HNav1 = ({ }: Props) => {
         <div className={Styles.container}>
             <HNavChild1 text='Trang chủ' icon={<GoHomeFill />} />
             <HNavChild1 text='Astra' icon={<AiOutlineCrown />} />
-            <HNavChild1 text='Tài khoản' icon={<PiSmileyWink />} />
+            <HNavChild1 text={<ModalAccount />} icon={<PiSmileyWink />} />
         </div>
     )
 }

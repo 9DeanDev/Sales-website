@@ -1,6 +1,7 @@
 import './App.css';
 import BodyContent from './components/BodyContent';
 import Header from './components/Header';
+import ModalAccount from './components/Modal/ModalAccount';
 import ModalProduct from './components/Modal/ModalProduct';
 
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <BodyContent />
       {/* <ModalProduct /> */}
+      <ModalAccount />
     </div>
   );
 }
