@@ -9,7 +9,7 @@ function App() {
     <div className="App container-fluid">
       <Header />
       <BodyContent />
-      <ModalProduct />
+      {/* <ModalProduct /> */}
     </div>
   );
 }

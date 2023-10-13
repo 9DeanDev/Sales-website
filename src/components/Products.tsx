@@ -4,7 +4,6 @@ import { FaStarHalf } from 'react-icons/fa';
 import { useState } from 'react';
 
 type Props = {
-
     img?: string;
     title?: string;
     ratings?: number;

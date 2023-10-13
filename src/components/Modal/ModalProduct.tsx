@@ -5,7 +5,14 @@ type Props = {}
 const ModalProduct = (props: Props) => {
     let [numberImg, setNumberImg] = useState(1)
     let countMaxImg = 6;
+    let [Zoom, setZoom] = useState(1);
     let img = `/assetspb/img${numberImg}.png`
+    const handleToZoomIn = () => {
+        setZoom(Zoom + 0.2)
+    }
+    const handleToZoomOut = () => {
+        setZoom(Zoom - 0.2)
+    }
     const handleToPrevious = () => {
         if (numberImg > 1)
             setNumberImg(numberImg - 1)
@@ -19,10 +26,9 @@ const ModalProduct = (props: Props) => {
     }
     return (
         <div className={Styles.container} >
-            <div className={Styles.img} >
-                <div>
-                    <img src={img} />
-                </div>
+            <div className={Styles.imgContainer} style={{ transform: `scale(${Zoom})` }}>
+                <img src={img} />
+
             </div>
             <div className={Styles.btn}>
                 <button onClick={() => handleToPrevious()} className={numberImg === 1 ? Styles.active : ''} disabled={numberImg === 1}>Previous</button>
@@ -30,6 +36,10 @@ const ModalProduct = (props: Props) => {
                     {numberImg}/{countMaxImg}
                 </div>
                 <button onClick={() => handleToNext()} className={numberImg === countMaxImg ? Styles.active : ''} disabled={numberImg === countMaxImg}>Next</button>
+
+                <button onClick={() => handleToZoomIn()}>+</button>
+                <button onClick={() => handleToZoomOut()}>-</button>
+
             </div>
             <div className={Styles.imgMini}>
                 {
@@ -43,6 +53,9 @@ const ModalProduct = (props: Props) => {
                     })
                 }
             </div>
+            {/* <div className={Styles.bottom}> */}
+
+            {/* </div> */}
         </div>
 
     )
