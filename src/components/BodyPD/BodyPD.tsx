@@ -1,4 +1,7 @@
 import Styles from './BodyPD.module.scss'
+import DetailsPD from './DetailsPD'
+import FormPD from './FormPD'
+import ImgPD from './ImgPD'
 
 type Props = {}
 
@@ -6,13 +9,13 @@ const BodyPD = (props: Props) => {
     return (
         <div className={Styles.container}>
             <div className={Styles.img}>
-                Ảnh
+                <ImgPD />
             </div>
             <div className={Styles.details}>
-                Thông tin
+                <DetailsPD />
             </div>
             <div className={Styles.form}>
-                Mua
+                <FormPD />
             </div>
         </div>
     )
