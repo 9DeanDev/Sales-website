@@ -6,21 +6,21 @@ import { FcGoogle } from 'react-icons/fc';
 type Props = {}
 
 const ModalAccount = (props: Props) => {
-    let [status, setStatus] = useState('close')
-    const handleClose = (event: any) => {
+    const [status, setStatus] = useState<'on' | 'off'>('off');
+    const handleChangeStatus = (event: any) => {
         event?.preventDefault()
-        setStatus(status === 'close' ? 'open' : 'close')
+        setStatus(status === 'off' ? 'on' : 'off')
     }
     return (
         <>
-            <button className={Styles.btn} onClick={(event) => handleClose(event)}>
+            <button className={Styles.btn} onClick={(event) => handleChangeStatus(event)}>
                 Tài khoản
             </button>
-            <div className={Styles.container} style={{ display: status === 'close' ? 'none' : 'block' }}>
+            <div className={Styles.container} style={{ display: status === 'off' ? 'none' : 'block' }}>
                 <div className={Styles.modalContainer} >
                     <div className={Styles.left}>
                         <div className={Styles.modalHeader}>
-                            <span className={Styles.close} onClick={(event) => handleClose(event)}>
+                            <span className={Styles.close} onClick={(event) => handleChangeStatus(event)}>
                                 &times;
                             </span>
                             <h2>
@@ -55,7 +55,6 @@ const ModalAccount = (props: Props) => {
                         </div>
                     </div>
                     <div className={Styles.right}>
-
                         <img src={img} />
                         <div>
                             Mua sắm tại tiki
@@ -63,7 +62,6 @@ const ModalAccount = (props: Props) => {
                         <div>
                             Siêu ưu đãi mỗi ngày
                         </div>
-
                     </div>
                 </div>
 
