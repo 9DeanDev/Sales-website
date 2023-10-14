@@ -1,3 +1,4 @@
+import Rating from '../Rating/Rating'
 import Styles from './DetailsPD.module.scss'
 
 type Props = {}
@@ -14,8 +15,9 @@ const DetailsPD = (props: Props) => {
                     Loa Bluetooth Anker SoundCore Motion B - A3109 - Hàng Chính Hãng
                 </p>
                 <p>
-                    4.7
-                    (390)
+                    <span>
+                        4.7 <Rating /> (390)
+                    </span>
                     <span>
                         Đã bán 1503
                     </span>

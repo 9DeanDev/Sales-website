@@ -4,6 +4,7 @@ import { AiOutlineCrown } from 'react-icons/ai';
 import { PiSmileyWink } from 'react-icons/pi';
 import ModalAccount from '../Modal/ModalAccount';
 import { HNavChild1, HNavChild2 } from './HNavChild';
+import { Link } from 'react-router-dom';
 
 type Props = {
 
@@ -12,8 +13,12 @@ type Props = {
 const HNav1 = ({ }: Props) => {
     return (
         <div className={Styles.container}>
-            <HNavChild1 text='Trang chủ' icon={<GoHomeFill />} />
-            <HNavChild1 text='Astra' icon={<AiOutlineCrown />} />
+            <Link to='/'>
+                <HNavChild1 text='Trang chủ' icon={<GoHomeFill />} />
+            </Link>
+            <Link to='/Astra'>
+                <HNavChild1 text='Astra' icon={<AiOutlineCrown />} />
+            </Link>
             <HNavChild1 text={<ModalAccount />} icon={<PiSmileyWink />} />
         </div>
     )

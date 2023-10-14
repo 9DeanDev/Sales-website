@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(211, 169, 250);
-    position: relative;
+    background: #ffffff;
+    gap: 10px;
 
     img {
         width: 100%;
@@ -15,10 +15,15 @@
         position: absolute;
         display: flex;
         transition: 0.3s;
+        background: #ffffff;
+        border: 1px solid rgb(221, 221, 221);
+        border-radius: 8px;
 
         img {
             transform: scale(1);
             transition: 0.3s;
+            border-radius: 8px;
+
         }
 
         position: relative;
@@ -30,11 +35,11 @@
     }
 
     .btn {
-        position: absolute;
+        // position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
-        bottom: -33px;
+        // bottom: -33px;
 
         .active {
             background: #000000;
@@ -44,13 +49,24 @@
 
     .imgMini {
         display: flex;
-        position: absolute;
-        bottom: -84px;
+        // position: absolute;
+        // bottom: -84px;
+        gap: 5px;
+
+        span {
+            // border: 1px solid rgb(221, 221, 221);
+
+            .active {
+                border: 1px solid rgb(40, 111, 204);
+                width: 100px;
+            }
+        }
 
         img {
             width: 50px;
             height: auto;
-            border: 1px solid;
+            background: #ffffff;
+            border: 1px solid rgb(221, 221, 221);
             cursor: pointer;
         }
     }

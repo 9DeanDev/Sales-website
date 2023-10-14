@@ -1,8 +1,9 @@
 import Styles from './Products.module.scss'
 import LabelReal from '../../assets/BSProducts/Sữa tắm/LabelReal.png'
-import { FaStarHalf } from 'react-icons/fa';
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Rating from '../Rating/Rating';
 
 type Props = {
     img?: string;
@@ -13,12 +14,6 @@ type Props = {
 }
 
 const Products = ({ img, title, ratings = 9, price, dateShipping }: Props) => {
-    let [rating, setRating] = useState(ratings)
-    const handleRating = (item: any, e: any) => {
-        e.preventDefault()
-        setRating(item)
-        console.log(item)
-    }
     return (
         <div className={Styles.container}>
             <Link to='/ProductDetails' className={Styles.link}>
@@ -33,19 +28,7 @@ const Products = ({ img, title, ratings = 9, price, dateShipping }: Props) => {
                         {title}
                     </div>
                     <div className={Styles.ratings}>
-                        {
-                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => {
-                                return (
-                                    <div>
-                                        <span style={{ color: rating >= item ? 'orange' : 'grey' }} onClick={(e) => handleRating(item, e)}>
-                                            {
-                                                item % 2 === 0 ? <FaStarHalf className={Styles.right} /> : <FaStarHalf className={Styles.left} />
-                                            }
-                                        </span>
-                                    </div>
-                                )
-                            })
-                        }
+                        <Rating ratings={ratings} />
                     </div>
                     <div className={Styles.price}>
                         {price}

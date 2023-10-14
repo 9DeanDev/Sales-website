@@ -35,17 +35,7 @@
             .ratings {
                 display: flex;
 
-                span {
-                    padding: 0;
-                    // position: relative;
 
-                    .right {
-                        transform: scaleX(-1);
-                        margin-left: -16px;
-                    }
-
-                    .left {}
-                }
             }
 
             .price {

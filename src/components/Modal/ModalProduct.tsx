@@ -28,9 +28,8 @@ const ModalProduct = (props: Props) => {
         <div className={Styles.container} >
             <div className={Styles.imgContainer} style={{ transform: `scale(${Zoom})` }}>
                 <img src={img} />
-
             </div>
-            <div className={Styles.btn}>
+            {/* <div className={Styles.btn}>
                 <button onClick={() => handleToPrevious()} className={numberImg === 1 ? Styles.active : ''} disabled={numberImg === 1}>Previous</button>
                 <div className={Styles.count}>
                     {numberImg}/{countMaxImg}
@@ -40,22 +39,19 @@ const ModalProduct = (props: Props) => {
                 <button onClick={() => handleToZoomIn()}>+</button>
                 <button onClick={() => handleToZoomOut()}>-</button>
 
-            </div>
+            </div> */}
             <div className={Styles.imgMini}>
                 {
                     [1, 2, 3, 4, 5, 6].map((item, index) => {
                         let imgMini = `/assetspb/img${item}.png`
                         return (
-                            <span onClick={() => handleToImg(item)}>
+                            <span onClick={() => handleToImg(item)} className={numberImg === (index + 1) ? Styles.active : ''}>
                                 <img src={imgMini} />
                             </span>
                         )
                     })
                 }
             </div>
-            {/* <div className={Styles.bottom}> */}
-
-            {/* </div> */}
         </div>
 
     )

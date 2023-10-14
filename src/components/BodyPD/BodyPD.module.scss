@@ -1,21 +1,22 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     gap: 24px;
 
     .img {
         display: flex;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         background: #ffffff;
         border-radius: 8px;
+        padding: 16px;
     }
 
     .details {
         display: flex;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         background: #ffffff;
         border-radius: 8px;
     }
@@ -23,7 +24,7 @@
     .form {
         display: flex;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         background: #ffffff;
         border-radius: 8px;
     }
