@@ -1,7 +1,8 @@
 import Styles from './Products.module.scss'
-import LabelReal from '../assets/BSProducts/Sữa tắm/LabelReal.png'
+import LabelReal from '../../assets/BSProducts/Sữa tắm/LabelReal.png'
 import { FaStarHalf } from 'react-icons/fa';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {
     img?: string;
@@ -20,7 +21,7 @@ const Products = ({ img, title, ratings = 9, price, dateShipping }: Props) => {
     }
     return (
         <div className={Styles.container}>
-            <a href='' className={Styles.link}>
+            <Link to='/ProductDetails' className={Styles.link}>
                 <div className={Styles.img}>
                     <img src={img} />
                 </div>
@@ -53,7 +54,7 @@ const Products = ({ img, title, ratings = 9, price, dateShipping }: Props) => {
                 <div className={Styles.dateShipping}>
                     {dateShipping}
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

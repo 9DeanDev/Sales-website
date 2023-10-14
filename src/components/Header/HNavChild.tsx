@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Styles from './HNavChild.module.scss'
 
 type Props = {
@@ -19,14 +20,14 @@ const HNavChild1 = ({ icon, text }: Props) => {
 }
 const HNavChild2 = ({ icon, text }: Props) => {
     return (
-        <a href='' className={Styles.container2}>
+        <Link to='/ProductDetails' className={Styles.container2}>
             <div className={Styles.icon}>
                 {icon}
             </div>
             <div className={Styles.text}>
                 {text}
             </div>
-        </a>
+        </Link>
     )
 }
 export { HNavChild1, HNavChild2 };

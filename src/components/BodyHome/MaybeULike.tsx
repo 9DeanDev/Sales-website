@@ -1,12 +1,12 @@
 import Styles from './MaybeULike.module.scss'
 import Products from './Products';
 import classnames from 'classnames'
-import img1 from '../assets/MBULProducts/Washing Machine/img1.png'
-import img2 from '../assets/MBULProducts/Washing Machine/img2.jpg'
-import img3 from '../assets/MBULProducts/Washing Machine/img3.png'
-import img4 from '../assets/MBULProducts/Washing Machine/img4.jpg'
-import img5 from '../assets/MBULProducts/Washing Machine/img5.jpg'
-import img6 from '../assets/MBULProducts/Washing Machine/img6.jpg'
+import img1 from '../../assets/MBULProducts/Washing Machine/img1.png'
+import img2 from '../../assets/MBULProducts/Washing Machine/img2.jpg'
+import img3 from '../../assets/MBULProducts/Washing Machine/img3.png'
+import img4 from '../../assets/MBULProducts/Washing Machine/img4.jpg'
+import img5 from '../../assets/MBULProducts/Washing Machine/img5.jpg'
+import img6 from '../../assets/MBULProducts/Washing Machine/img6.jpg'
 import { useState } from 'react';
 type Props = {}
 

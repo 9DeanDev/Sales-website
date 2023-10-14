@@ -15,26 +15,27 @@
         align-items: center;
         position: relative;
         background-color: #fefefe;
-        margin: 15% auto;
+        margin: 150px auto 0 auto;
         padding: 0;
         border: 1px solid #888;
         border-radius: 15px;
         width: 60%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        // animation-name: animatetop;
-        // animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
 
-        // @keyframes animatetop {
-        //     from {
-        //         top: -300px;
-        //         opacity: 0
-        //     }
+        @keyframes animatetop {
+            from {
+                top: -150px;
+                opacity: 0
+            }
 
-        //     to {
-        //         top: 0;
-        //         opacity: 1
-        //     }
-        // }
+            to {
+                top: 0px;
+                opacity: 1
+            }
+        }
+
         .left {
             flex: 60%;
 

@@ -1,9 +1,9 @@
 import Styles from './HNav.module.scss'
-import { HNavChild1, HNavChild2 } from './HNavChild'
 import { GoHomeFill } from 'react-icons/go';
 import { AiOutlineCrown } from 'react-icons/ai';
 import { PiSmileyWink } from 'react-icons/pi';
-import ModalAccount from './Modal/ModalAccount';
+import ModalAccount from '../Modal/ModalAccount';
+import { HNavChild1, HNavChild2 } from './HNavChild';
 
 type Props = {
 
