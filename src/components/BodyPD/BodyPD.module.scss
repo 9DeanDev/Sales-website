@@ -3,6 +3,7 @@
     justify-content: center;
     // align-items: center;
     gap: 24px;
+    margin: 16px 40px;
 
     .img {
         display: flex;
@@ -11,6 +12,12 @@
         background: #ffffff;
         border-radius: 8px;
         padding: 16px;
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        // position: sticky;
+        // top: 12px;
+        gap: 16px;
     }
 
     .details {

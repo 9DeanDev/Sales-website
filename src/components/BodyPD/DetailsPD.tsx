@@ -1,54 +1,54 @@
 import Rating from '../Rating/Rating'
 import Styles from './DetailsPD.module.scss'
+import { TbTruckDelivery } from 'react-icons/tb';
+
 
 type Props = {}
 
 const DetailsPD = (props: Props) => {
     return (
         <div className={Styles.container}>
-            <div>
-                <p>
+            <div className={Styles.details}>
+                <div className={Styles.brand}>
                     <img src='' />
                     Thương hiệu: Soundcore by Anker
-                </p>
-                <p>
-                    Loa Bluetooth Anker SoundCore Motion B - A3109 - Hàng Chính Hãng
-                </p>
-                <p>
-                    <span>
-                        4.7 <Rating /> (390)
-                    </span>
-                    <span>
-                        Đã bán 1503
-                    </span>
-                </p>
-                <p>
-                    1.120.000đ
-                    <span>
-                        -20%
-                    </span>
-                </p>
-                <p>
-                    Màu sắc
-                </p>
-                <div>
-                    <img src='' />
-                    Đen
                 </div>
+                <h5 className={Styles.name}>
+                    Sữa Tắm Trắng Da Giữ Ẩm Hatomugi Nhật Bản 800ml
+                </h5>
+                <div className={Styles.vote}>
+                    4.7
+                    <div>
+                        <Rating ratings={10} />
+                    </div>
+                    (390)
+                    <div className={Styles.bar}>
+
+                    </div>
+                    <div>
+                        Đã bán 1503
+                    </div>
+                </div>
+                <h3 className={Styles.price}>
+                    95.000đ
+                </h3>
             </div>
-            <div>
-                <p>
+            <div className={Styles.transport}>
+                <b className={Styles.title}>
                     Thông tin vận chuyển
-                </p>
-                <p>
+                </b>
+                <div className={Styles.address}>
                     Giao đến Q. Hải Châu, P. Hải Châu I, Đà Nẵng
-                </p>
-                <p>
-                    Giao Thứ hai
-                </p>
-                <p>
-                    Trước 24h, 16/10: 12.000₫ 42.000₫
-                </p>
+                </div>
+                <div className={Styles.time}>
+                    <TbTruckDelivery />
+                    <span>
+                        Giao Thứ hai
+                    </span>
+                </div>
+                <div className={Styles.plan}>
+                    Trước 24h, 16/10: 12.000₫ <span>42.000₫</span>
+                </div>
             </div>
         </div>
     )

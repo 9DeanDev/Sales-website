@@ -9,7 +9,7 @@ const ImgPD = (props: Props) => {
             <div>
                 <ModalProduct />
             </div>
-            <div>
+            {/* <div>
                 <p>
                     Đặc điểm nổi bật
                 </p>
@@ -24,7 +24,7 @@ const ImgPD = (props: Props) => {
                         Chất âm mạnh mẽ với driver toàn dải kép và công suất lớn.
                     </li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     )
 }
