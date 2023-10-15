@@ -8,7 +8,7 @@ const Cart = (props: Props) => {
         <div className={Styles.container}>
             <div>
                 {/* <span>0</span> */}
-                <FiShoppingCart />
+                <FiShoppingCart />(0)
             </div>
 
         </div>

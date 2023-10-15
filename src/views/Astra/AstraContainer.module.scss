@@ -1,0 +1,90 @@
+.container {
+    background-image: url('../../assets/BgAstra.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 300px, cover;
+    display: flex;
+    color: #ffffff;
+    padding: 24px;
+
+
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        gap: 16px;
+        justify-content: space-between;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            // align-items: baseline;
+            min-height: 178px;
+            border: 0.5px dashed blue;
+            border-radius: 8px;
+
+            .topCard {
+                display: flex;
+                justify-content: space-between;
+                text-decoration: none;
+
+                .title {
+                    img {
+                        width: 136px;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                }
+
+                .btn {
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 24px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    background: none;
+                }
+            }
+
+            .bottomCard {
+                cursor: pointer;
+                // .content {}
+
+                // h3 {}
+            }
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            gap: 5px;
+            color: rgb(37, 37, 37);
+            padding: 10px;
+            border-radius: 10px;
+        }
+    }
+
+    .right {
+        width: calc(100% - 330px);
+        padding-left: 24px;
+
+        .content {
+            background: #ffffff;
+            border-radius: 18px;
+            min-height: 197px;
+            padding: 16px;
+            margin: 16px 0;
+
+            .title {
+                color: #000;
+            }
+
+            .nav {}
+        }
+    }
+}

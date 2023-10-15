@@ -6,6 +6,7 @@ import ModalProduct from './components/Modal/ModalProduct';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetails from './views/ProductDetails/ProductDetails';
 import Home from './views/Home/Home';
+import Astra from './views/Astra/Astra';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="App container-fluid">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Astra" element={<Astra />} />
           <Route path="/ProductDetails" element={<ProductDetails />} />
         </Routes>
       </div>
