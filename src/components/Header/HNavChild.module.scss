@@ -35,18 +35,35 @@
     border-radius: 10px;
     padding: 10px 0px;
 
-    // &:hover {
-    //     background: #dddddd;
-    // }
-
-    // .active {
-    //     background: #8fcbdd;
-    // }
-
     .icon {
         display: flex;
         align-items: center;
         margin: 4px;
+    }
+
+    .text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+
+
+    .img {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     .text {

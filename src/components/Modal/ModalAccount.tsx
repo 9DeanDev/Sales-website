@@ -3,9 +3,16 @@ import { useState } from 'react'
 import img from '../../assets/ModalAccountImg.png'
 import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
-type Props = {}
+type Props = {
+    text?: string;
+    border?: string;
+    borderRadius?: string;
+    fontWeight?: number;
+    fontSize?: number;
+    color?: string;
+}
 
-const ModalAccount = (props: Props) => {
+const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius }: Props) => {
     const [status, setStatus] = useState<'on' | 'off'>('off');
     const handleChangeStatus = (event: any) => {
         event?.preventDefault()
@@ -13,8 +20,9 @@ const ModalAccount = (props: Props) => {
     }
     return (
         <>
-            <button className={Styles.btn} onClick={(event) => handleChangeStatus(event)}>
-                Tài khoản
+            <button className={Styles.btn} onClick={(event) => handleChangeStatus(event)}
+                style={{ border: border, fontWeight: fontWeight, fontSize: fontSize, color: color, borderRadius: borderRadius }}>
+                {text}
             </button>
             <div className={Styles.container} style={{ display: status === 'off' ? 'none' : 'block' }}>
                 <div className={Styles.modalContainer} >

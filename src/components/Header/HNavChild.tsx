@@ -4,6 +4,7 @@ import Styles from './HNavChild.module.scss'
 type Props = {
     icon?: React.ReactNode;
     text?: React.ReactNode;
+    img?: string;
 }
 
 const HNavChild1 = ({ icon, text }: Props) => {
@@ -30,4 +31,17 @@ const HNavChild2 = ({ icon, text }: Props) => {
         </Link>
     )
 }
-export { HNavChild1, HNavChild2 };
+
+const HNavChild3 = ({ icon, text, img }: Props) => {
+    return (
+        <Link to='/ProductDetails' className={Styles.container3}>
+            <div className={Styles.img}>
+                <img src={img} />
+            </div>
+            <div className={Styles.text}>
+                {text}
+            </div>
+        </Link>
+    )
+}
+export { HNavChild1, HNavChild2, HNavChild3 };

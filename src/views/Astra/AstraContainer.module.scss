@@ -15,7 +15,7 @@
         flex-direction: column;
         width: 330px;
         gap: 16px;
-        justify-content: space-between;
+
 
         .card {
             display: flex;
@@ -25,6 +25,7 @@
             min-height: 178px;
             border: 0.5px dashed blue;
             border-radius: 8px;
+            justify-content: space-between;
 
             .topCard {
                 display: flex;
@@ -76,12 +77,15 @@
         .content {
             background: #ffffff;
             border-radius: 18px;
-            min-height: 197px;
+
             padding: 16px;
             margin: 16px 0;
 
             .title {
                 color: #000;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 12px;
             }
 
             .nav {}
