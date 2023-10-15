@@ -3,6 +3,8 @@ import { useState } from 'react'
 import img from '../../assets/ModalAccountImg.png'
 import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 type Props = {
     text?: string;
     border?: string;
@@ -14,9 +16,38 @@ type Props = {
 
 const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius }: Props) => {
     const [status, setStatus] = useState<'on' | 'off'>('off');
+    const [phone, setPhone] = useState('')
+    const [pass, setPass] = useState('')
     const handleChangeStatus = (event: any) => {
         event?.preventDefault()
         setStatus(status === 'off' ? 'on' : 'off')
+    }
+    const handleInsertPhone = (e: any) => {
+        setPhone(e.target.value)
+        console.log('Setphone:', phone)
+    }
+    const handleInsertPass = (e: any) => {
+        setPass(e.target.value)
+        console.log('Setpass:', pass)
+    }
+    const handleClickLogIn = () => {
+        if (!phone) {
+            console.log('Click tt')
+            toast.error('Số điện thoại không hợp lệ')
+        }
+        if (!pass) {
+            console.log('Click tt')
+            toast.error('Mật khẩu không đúng')
+        }
+        else {
+            console.log('Click tt')
+            toast.success('Đăng nhập thành công')
+            setTimeout(() => {
+                setStatus('off')
+            }, 2500);
+            setPass('')
+            setPhone('')
+        }
     }
     return (
         <>
@@ -39,11 +70,13 @@ const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius 
                             <p>
                                 Đăng nhập hoặc tạo tài khoản
                             </p>
-                            <input placeholder='Số điện thoại'>
+                            <input value={phone} placeholder='Số điện thoại' required onChange={(e) => handleInsertPhone(e)}>
 
                             </input>
-                            <button >
-                                Tiếp tục
+                            <input value={pass} placeholder='Mật khẩu' required onChange={(e) => handleInsertPass(e)}>
+                            </input>
+                            <button onClick={() => handleClickLogIn()}>
+                                Tiếp Tục
                             </button>
                             <div>
                                 Đăng nhập bằng email
@@ -71,8 +104,19 @@ const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius 
                             Siêu ưu đãi mỗi ngày
                         </div>
                     </div>
+                    <ToastContainer
+                        position="top-right"
+                        autoClose={1000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
                 </div>
-
             </div>
         </>
     )
