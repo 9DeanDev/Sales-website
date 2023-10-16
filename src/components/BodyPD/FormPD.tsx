@@ -2,9 +2,13 @@ import { useState } from 'react'
 import Styles from './FormPD.module.scss'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-type Props = {}
+import { connect, useDispatch } from 'react-redux';
+type Props = {
+    addToCart: any
+}
 
 const FormPD = (props: Props) => {
+    // let [cart, setCart] = useState(0)
     let [numberPD, setNumberPD] = useState(1)
     const handleDecreaseNum = () => {
         if (numberPD > 1)
@@ -17,6 +21,8 @@ const FormPD = (props: Props) => {
         toast.success('Order Success')
     }
     const handleClickAddToCart = () => {
+        console.log('props form', props.addToCart)
+        props.addToCart()
         toast.success('Added to cart')
     }
     return (
@@ -50,7 +56,7 @@ const FormPD = (props: Props) => {
                 </button>
             </div>
             <ToastContainer
-                position="top-right"
+                position="bottom-right"
                 autoClose={2000}
                 hideProgressBar={false}
                 newestOnTop={false}
@@ -65,5 +71,9 @@ const FormPD = (props: Props) => {
 
     )
 }
-
-export default FormPD
+const mapDispathToProps = (dispatch: any) => {
+    return {
+        addToCart: () => dispatch({ type: 'ADD' })
+    }
+}
+export default connect(null, mapDispathToProps)(FormPD);
