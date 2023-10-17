@@ -13,7 +13,7 @@ type Props = {
     dateShipping?: string;
 }
 
-const Products = ({ img, title, ratings = 9, price, dateShipping }: Props) => {
+const Products = ({ img, title, ratings, price, dateShipping }: Props) => {
     return (
         <div className={Styles.container}>
             <Link to='/ProductDetails' className={Styles.link}>

@@ -2,8 +2,7 @@ const rootReducer = (state = 0, action: any) => {
     switch (action.type) {
         case 'ADD':
             state = state + 1;
-            console.log('dispatch success', action)
-            console.log('dispatch success', state)
+            console.log('action', action)
             return state;
         default:
             // console.log('dispatch success', action)

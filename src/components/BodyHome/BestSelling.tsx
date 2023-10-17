@@ -48,7 +48,7 @@ const BestSelling = (props: Props) => {
             price3: '235.000đ', dateShipping3: 'Giao thứ 6, 13/10',
             img4: img4, title4: 'Combo Sữa tắm dưỡng ẩm Senka Perfect Whip hương hoa hồng, đinh hương 500ml và Sữa rửa mặt chiết xuất đất sét trắng Senka Perfect Whip Clay 120g',
             ratings4: 10, price4: '452.000đ', dateShipping4: 'Giao thứ 6, 13/10',
-            img5: img5, title5: 'Sữa Tắm White Conc Body Nhật Bản Dưỡng Da Trắng Hồng, 360ml', ratings5: 8,
+            img5: img5, title5: 'Sữa Tắm White Conc Body Nhật Bản Dưỡng Da Trắng Hồng, 360ml', ratings5: 9,
             price5: '234.000đ', dateShipping5: 'Giao thứ 6, 13/10',
             img6: img6, title6: 'Sữa Tắm Romano Attitude 650g', ratings6: 10,
             price6: '199.000đ', dateShipping6: 'Giao thứ 6, 13/10'
@@ -59,7 +59,7 @@ const BestSelling = (props: Props) => {
             price1: '155.000đ', dateShipping1: 'Giao thứ 6, 13/10',
             img2: img12, title2: 'Dầu Gội Clear Sạch Gàu Dầu Gội Sạch Gàu Mát Lạnh Bạc Hà 3X Sức Mạnh Đánh Bay Gàu, Ngứa, Vi Khuẩn 1.4kg', ratings2: 9,
             price2: '95.000đ', dateShipping2: 'Giao thứ 6, 13/10',
-            img3: img13, title3: 'Dầu Gội Đầu Clear Men Cool Sport Dầu Gội Bạc Hà Mát Lạnh Cực Đỉnh Suốt Ngày Dài Đánh Bay Gàu, Ngứa & Vi Khuẩn 900g', ratings3: 10,
+            img3: img13, title3: 'Dầu Gội Đầu Clear Men Cool Sport Dầu Gội Bạc Hà Mát Lạnh Cực Đỉnh Suốt Ngày Dài Đánh Bay Gàu, Ngứa & Vi Khuẩn 900g', ratings3: 9,
             price3: '235.000đ', dateShipping3: 'Giao thứ 6, 13/10',
             img4: img14, title4: 'Dầu Gội Clear Sạch Gàu Dầu Gội Sạch Gàu Mát Lạnh Bạc Hà 3X Sức Mạnh Đánh Bay Gàu, Ngứa, Vi Khuẩn 1.4kg',
             ratings4: 10, price4: '452.000đ', dateShipping4: 'Giao thứ 6, 13/10',
@@ -70,7 +70,7 @@ const BestSelling = (props: Props) => {
         },
         {
             types: 'Kem và sữa dưỡng da',
-            img1: img21, title1: 'Kem Dưỡng Phục Hồi Da AVENE Cicalfate Repair Cream 100ml', ratings1: 10,
+            img1: img21, title1: 'Kem Dưỡng Phục Hồi Da AVENE Cicalfate Repair Cream 100ml', ratings1: 9,
             price1: '99.000đ', dateShipping1: 'Giao thứ 6, 13/10',
             img2: img22, title2: 'Kem dưỡng phục hồi đa công dụng và làm dịu da La Roche-Posay Cicaplast Baume B5+ 40ml', ratings2: 9,
             price2: '199.000đ', dateShipping2: 'Giao thứ 6, 13/10',
@@ -80,12 +80,12 @@ const BestSelling = (props: Props) => {
             ratings4: 10, price4: '452.000đ', dateShipping4: 'Giao thứ 6, 13/10',
             img5: img25, title5: `Kem dưỡng da ban đêm POND'S dưỡng ẩm da cho da sáng mịn căng mướt 50g`, ratings5: 8,
             price5: '299.000đ', dateShipping5: 'Giao thứ 6, 13/10',
-            img6: img26, title6: 'Kem dưỡng ẩm Hada Labo Advanced Nourish Hyaluronic Acid Cream (50g)', ratings6: 10,
+            img6: img26, title6: 'Kem dưỡng ẩm Hada Labo Advanced Nourish Hyaluronic Acid Cream (50g)', ratings6: 9,
             price6: '99.000đ', dateShipping6: 'Giao thứ 6, 13/10'
         },
         {
             types: 'Máy tính bảng',
-            img1: img31, title1: 'Apple iPad 10.2-inch ( 9th Gen) Wi-Fi 2021', ratings1: 10,
+            img1: img31, title1: 'Apple iPad 10.2-inch ( 9th Gen) Wi-Fi 2021', ratings1: 8,
             price1: '595.000đ', dateShipping1: 'Giao thứ 6, 13/10',
             img2: img32, title2: 'Máy tính bảng Samsung Galaxy Tab S7 FE WIFI (4GB/64GB) - Hàng chính hãng - Đã kích hoạt bảo hành điện tử', ratings2: 9,
             price2: '1095.000đ', dateShipping2: 'Giao thứ 6, 13/10',
@@ -95,7 +95,7 @@ const BestSelling = (props: Props) => {
             ratings4: 10, price4: '452.000đ', dateShipping4: 'Giao thứ 6, 13/10',
             img5: img35, title5: 'Máy Tính Bảng Samsung Galaxy Tab A7 Lite T225 3GB/32GB - Hàng Chính Hãng  ', ratings5: 8,
             price5: '2349.000đ', dateShipping5: 'Giao thứ 6, 13/10',
-            img6: img36, title6: 'Máy tính bảng Kindle File HD 8 (10th generation - 2020) Hàng nhập khẩu', ratings6: 10,
+            img6: img36, title6: 'Máy tính bảng Kindle File HD 8 (10th generation - 2020) Hàng nhập khẩu', ratings6: 8,
             price6: '1999.000đ', dateShipping6: 'Giao thứ 6, 13/10'
         },
     ]
