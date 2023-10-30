@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetails from './views/ProductDetails/ProductDetails';
 import Home from './views/Home/Home';
 import Astra from './views/Astra/Astra';
+import Home1 from './views/Home/Home1';
+
 
 function App() {
   return (

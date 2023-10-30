@@ -5,6 +5,18 @@ import { BsFacebook } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+const schema = yup
+    .object()
+    .shape({
+        username: yup.string().required(),
+        password: yup.string().min(6).max(20).required(),
+    })
+    .required();
+
 type Props = {
     text?: string;
     border?: string;
@@ -15,6 +27,9 @@ type Props = {
 }
 
 const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius }: Props) => {
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: yupResolver(schema),
+    });
     const [status, setStatus] = useState<'on' | 'off'>('off');
     const [phone, setPhone] = useState('')
     const [pass, setPass] = useState('')
@@ -70,14 +85,16 @@ const ModalAccount = ({ text, border, fontSize, fontWeight, color, borderRadius 
                             <p>
                                 Đăng nhập hoặc tạo tài khoản
                             </p>
-                            <input value={phone} placeholder='Số điện thoại' required onChange={(e) => handleInsertPhone(e)}>
-
-                            </input>
-                            <input value={pass} placeholder='Mật khẩu' required onChange={(e) => handleInsertPass(e)}>
-                            </input>
-                            <button onClick={() => handleClickLogIn()}>
-                                Tiếp Tục
-                            </button>
+                            <form onSubmit={handleSubmit((d) => console.log(d))} className='d-flex flex-column gap-3'>
+                                <input type='text' className='form-control' placeholder='Số điện thoại' {...register('username')} />
+                                {errors.username?.message}
+                                <input type='password' className='form-control' placeholder='Mật khẩu' {...register('password')} />
+                                {errors.password?.message}
+                                <small>Use this account for testing: (username:tungnt@softech.vn / password:123456789)</small>
+                                <button type='submit' className='btn btn-primary w-100'>
+                                    Tiếp Tục
+                                </button>
+                            </form>
                             <div>
                                 Đăng nhập bằng email
                             </div>

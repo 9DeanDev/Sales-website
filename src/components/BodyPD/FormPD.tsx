@@ -2,13 +2,16 @@ import { useState } from 'react'
 import Styles from './FormPD.module.scss'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../app/store';
+import { increment } from '../../features/counter/counterSlice';
 type Props = {
-    addToCart: any
+    // addToCart: any
 }
 
 const FormPD = (props: Props) => {
-    // let [cart, setCart] = useState(0)
+    const dispatch = useDispatch()
+
     let [numberPD, setNumberPD] = useState(1)
     const handleDecreaseNum = () => {
         if (numberPD > 1)
@@ -21,8 +24,8 @@ const FormPD = (props: Props) => {
         toast.success('Order Success')
     }
     const handleClickAddToCart = () => {
-        console.log('props form', props.addToCart)
-        props.addToCart()
+        // console.log('props form', props.addToCart)
+        // props.addToCart()
         toast.success('Added to cart')
     }
     return (
@@ -51,7 +54,7 @@ const FormPD = (props: Props) => {
                 <button className={Styles.buyBtn} onClick={() => handleClickBuy()}>
                     Mua ngay
                 </button>
-                <button className={Styles.addToCartBtn} onClick={() => handleClickAddToCart()}>
+                <button className={Styles.addToCartBtn} onClick={() => dispatch(increment())}>
                     Thêm vào giỏ
                 </button>
             </div>
@@ -71,9 +74,12 @@ const FormPD = (props: Props) => {
 
     )
 }
-const mapDispathToProps = (dispatch: any) => {
-    return {
-        addToCart: () => dispatch({ type: 'ADD' })
-    }
-}
-export default connect(null, mapDispathToProps)(FormPD);
+// const mapDispathToProps = (dispatch: any) => {
+//     return {
+//         addToCart: () => dispatch({ type: 'ADD' })
+//     }
+// }
+export default
+    // connect(null, mapDispathToProps)(
+    FormPD
+// );
